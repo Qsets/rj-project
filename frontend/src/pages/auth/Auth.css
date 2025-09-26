@@ -1,0 +1,327 @@
+/* 认证页面容器 */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* 认证卡片 */
+.auth-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.register-card {
+  max-width: 480px;
+}
+
+/* 认证头部 */
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-large {
+  font-size: 36px;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 16px;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.auth-title {
+  margin-bottom: 8px !important;
+  color: #262626;
+  font-weight: 600;
+}
+
+.auth-subtitle {
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 认证表单 */
+.auth-form {
+  margin-bottom: 24px;
+}
+
+.auth-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: #262626;
+}
+
+.auth-form .ant-input-affix-wrapper,
+.auth-form .ant-input {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s;
+}
+
+.auth-form .ant-input-affix-wrapper:hover,
+.auth-form .ant-input:hover {
+  border-color: #8b5cf6;
+}
+
+.auth-form .ant-input-affix-wrapper:focus,
+.auth-form .ant-input-affix-wrapper-focused,
+.auth-form .ant-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* 认证按钮 */
+.auth-button {
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+/* 认证选项 */
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.auth-link {
+  color: #6366f1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #8b5cf6;
+}
+
+/* 认证分割线 */
+.auth-divider {
+  margin: 24px 0;
+}
+
+.auth-divider .ant-divider-inner-text {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+/* 认证底部 */
+.auth-footer {
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+/* 背景装饰 */
+.auth-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.bg-shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bg-shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.bg-shape-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* 验证码区域 */
+.verification-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.verification-title {
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.verification-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.verification-steps li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.verification-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.verification-steps .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #6366f1;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.verification-steps .step-completed .step-number {
+  background: #10b981;
+}
+
+.verification-steps .step-current .step-number {
+  background: #f59e0b;
+}
+
+/* 邀请码输入 */
+.invite-code-input {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* 验证码输入 */
+.verification-code-input {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+/* 发送验证码按钮 */
+.send-code-button {
+  min-width: 100px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.send-code-button:disabled {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 16px;
+  }
+  
+  .auth-card {
+    padding: 32px 24px;
+  }
+  
+  .register-card {
+    max-width: 100%;
+  }
+  
+  .logo-large {
+    font-size: 32px;
+  }
+  
+  .auth-title {
+    font-size: 20px;
+  }
+  
+  .bg-shape-1 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .bg-shape-2 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bg-shape-3 {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 20px;
+  }
+  
+  .auth-options {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .verification-section {
+    padding: 16px;
+  }
+}
